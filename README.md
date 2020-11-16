@@ -32,7 +32,7 @@ linux下载命令：wget -c https://github.com/tandangfei/nif/archive/master.zip
 pip安装命令：wget https://bootstrap.pypa.io/get-pip.py  
 python get-pip.py  
 ```
-linux安装关联的插件命令：pip freeze >requirements.txt  
+linux安装关联的插件命令：pip install -r requirements.txt  
 
 
 ## 使用说明
