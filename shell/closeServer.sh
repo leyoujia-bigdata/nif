@@ -41,7 +41,7 @@ else
     echo 'start fail'
     if (($3 == 0))
     then
-     ./openServer.sh $1 $2 1
+     ./shell/openServer.sh $1 $2 1  $4 $5
      "$5" -s reload
      echo 'huigun!!!!'
     fi

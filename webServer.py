@@ -3,6 +3,7 @@ import os
 import flask
 import json
 import configparser
+import logging
 from flask import request
 
 server = flask.Flask(__name__)
@@ -19,9 +20,8 @@ config = []
 
 # init config
 def init_config():
-    root_dir = os.path.dirname(os.path.abspath('.'))
     cf = configparser.ConfigParser()
-    cf.read(root_dir + "/nginx-ip-fusing/config.ini")
+    cf.read("config.ini")
 
     config = MyConfig()
 
@@ -36,7 +36,7 @@ def init_config():
 @server.route('/auto_nginx', methods=['get'])
 def auto_nginx():
     p_type = request.args.get('type')
-    ip = request.args.get('id')
+    ip = request.args.get('ip')
     port = request.args.get('port')
     if p_type == '':
         p_type = 1
@@ -53,8 +53,7 @@ def auto_nginx():
             resu['result'] = result_number
 
     except Exception as e:
-        print(e)
-
+        logging.warning(e)
         resu = {'code': 109, 'result': 'fail!'}
 
     return json.dumps(resu, ensure_ascii=False)

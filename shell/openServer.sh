@@ -42,7 +42,7 @@ else
     echo 'start fail'
     if (($3 == 0))
     then
-     ./closeServer.sh $1 $2 1
+     ./shell/closeServer.sh $1 $2 1 $4 $5
      "$5" -s reload
      echo 'huigun!!!!'
     fi
