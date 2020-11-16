@@ -28,8 +28,12 @@ nginx 代表nginx对应的地址
 ## 部署说明
 linux下载命令：wget -c https://github.com/tandangfei/nif/archive/master.zip   
 依赖的插件请查看requirements.txt  
+```
 pip安装命令：wget https://bootstrap.pypa.io/get-pip.py  
+选择版本安装  
+wget https://pypi.python.org/packages/source/p/pip/pip-1.3.1.tar.gz --no-check-certificate  
 python get-pip.py  
+```
 linux安装关联的插件命令：pip freeze >requirements.txt  
 
 
