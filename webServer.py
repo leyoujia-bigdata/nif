@@ -39,17 +39,16 @@ def auto_nginx():
     ip = request.args.get('ip')
     port = request.args.get('port')
     if p_type == '':
-        p_type = 1
+        p_type = '1'
 
     resu = {'code': 100, 'result': 'success!'}
 
-
     try:
         if p_type == '1':
-            result_number = os.system("./shell/openServer.sh '" + ip + "' '" + port + "' 0 '" + config.nginx_config_path + "' '" + config.nginx_path + "'")
+            result_number = os.system("./shell/openServer.sh '" + ip + "' '" + port + "' '" + config.nginx_config_path + "' '" + config.nginx_path + "'")
             resu['result'] = result_number
         else:
-            result_number = os.system("./shell/closeServer.sh '" + ip + "' '" + port + "' 0 '" + config.nginx_config_path + "' '" + config.nginx_path + "'")
+            result_number = os.system("./shell/closeServer.sh '" + ip + "' '" + port + "' '" + config.nginx_config_path + "' '" + config.nginx_path + "'")
             resu['result'] = result_number
 
     except Exception as e:
