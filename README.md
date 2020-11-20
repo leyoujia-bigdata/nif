@@ -28,7 +28,7 @@ webServer 代表服务发布的配置
 nginx 代表nginx对应的地址
 
 ## 部署说明
-linux下载命令：wget -c https://github.com/tandangfei/nif/archive/master.zip   
+linux下载命令：wget -c https://github.com/leyoujia-bigdata/nif/archive/master.zip   
 依赖的插件请查看requirements.txt  
 ```
 pip安装命令：wget https://bootstrap.pypa.io/get-pip.py  
