@@ -35,7 +35,7 @@ pip安装命令：wget https://bootstrap.pypa.io/get-pip.py
 python get-pip.py  
 ```
 linux安装关联的插件命令：pip install -r requirements.txt  
-安装完成后，需要对shell目录下的脚本进行授权，不然会运行不了
+安装完成后，需要对shell目录下的脚本进行授权，不然会运行不了  
 
 
 ## 使用说明
@@ -44,6 +44,7 @@ linux安装关联的插件命令：pip install -r requirements.txt
 1. type代表是屏蔽还是打开 0=屏蔽 1=打开
 2. ip 代表要屏蔽/打开的ip
 3. port 代表要屏蔽/打开的port
+4. 启动的用户必须跟nginx是同一用户
 
 ## 回滚说明
 1. 在屏蔽或者打开时，如果启动nginx错误，会自动回滚并启动
